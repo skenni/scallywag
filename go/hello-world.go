@@ -10,17 +10,17 @@ import (
 func main() {
 
     http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-        fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
+        fmt.Fprintf(w, "WAZZUP, %q", html.EscapeString(r.URL.Path))
     })
 
-    http.HandleFunc("/hi", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintf(w, "Hi")
+    http.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintf(w, "goodbye")
     })
 
     http.HandleFunc("/marco", func(w http.ResponseWriter, r *http.Request){
         fmt.Fprintf(w, "POLO")
     })
 
-    log.Fatal(http.ListenAndServe(":8081", nil))
+    log.Fatal(http.ListenAndServe(":8080", nil))
 
 }
