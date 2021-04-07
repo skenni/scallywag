@@ -17,7 +17,7 @@ func main() {
         fmt.Fprintf(w, "goodbye")
     })
 
-    http.HandleFunc("/marco", func(w http.ResponseWriter, r *http.Request){
+    http.HandleFunc("/MARCO", func(w http.ResponseWriter, r *http.Request){
         fmt.Fprintf(w, "POLO")
     })
 
