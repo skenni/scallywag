@@ -2,7 +2,6 @@ package main
 
 import (
     "fmt"
-    "html"
     "log"
     "net/http"
     "os"
@@ -18,10 +17,8 @@ func main() {
 		panic(err)
 	}
 
-	fmt.Println("hostname:", name)
+	fmt.Fprintf("hostname:", name)
     })
-
-    
 
     log.Fatal(http.ListenAndServe(":8080", nil))
 
