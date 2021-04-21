@@ -12,12 +12,12 @@ func main() {
 
     http.HandleFunc("/MARCO", func(w http.ResponseWriter, r *http.Request){
         fmt.Fprintf(w, "POLO!")
-	name, err := os.Hostname()
+	host, err := os.Hostname()
 	if err != nil {
 		panic(err)
 	}
 
-	fmt.Fprintf("hostname:", name)
+	fmt.Fprintf(w,"hostname: %s", host)
     })
 
     log.Fatal(http.ListenAndServe(":8080", nil))
