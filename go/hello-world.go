@@ -10,14 +10,14 @@ import (
 func main() {
 
 
-    http.HandleFunc("/MARCO", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintf(w, "POLO!")
+    http.HandleFunc("/marco", func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintf(w, "\n\nPOLO!")
 	host, err := os.Hostname()
 	if err != nil {
 		panic(err)
 	}
 
-	fmt.Fprintf(w,"hostname: %s", host)
+	fmt.Fprintf(w,"\n\nhostname: %s", host)
     })
 
     log.Fatal(http.ListenAndServe(":8080", nil))
